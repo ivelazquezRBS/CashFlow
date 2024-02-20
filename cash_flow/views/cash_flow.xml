@@ -1,0 +1,24 @@
+<odoo>
+  <data>
+    <record id="cash_flow_inherit" model="ir.ui.view">
+      <field name="name">cash.flow.form.inherit</field>
+      <field name="model">cash.flow</field>
+      <field name="arch" type="xml">
+        <form>
+          <field name="name" />
+          <field name="fecha_i" />
+          <field name="fecha_f" />
+          <field name="sale" />
+        </form>
+      </field>
+    </record>
+
+    <record id="action_cash_flow" model="ir.actions.act_window">
+      <field name="name">Cash Flow</field>
+      <field name="res_model">cash.flow</field>
+      <field name="view_mode">form</field>
+    </record>
+    <menuitem name="cash_flow" id="cash_flow.menu_root"/>
+    <menuitem name="form" id="cash_flow.menu_1_form" parent="cash_flow.menu_root" action="action_cash_flow"/>
+  </data>
+</odoo>
